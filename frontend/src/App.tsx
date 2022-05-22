@@ -1,6 +1,9 @@
+import Navigation from "./components/Navigation";
+import Publicity from "./components/Publicity";
+
 function App() {
   return (
-    <h1>Study Docs</h1>
+    <><Navigation /><Publicity /></>
   );
 }
 

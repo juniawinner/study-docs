@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Macondo&display=swap");
+
+header {
+  display: grid;
+  
+  /* Imagem de Sylvie_SHENG por Pixabay:
+  https://pixabay.com/pt/illustrations/fundo-padronizar-textura-projeto-1311251/ */
+  background-image: url("https://ik.imagekit.io/x4ikoq975/Study_Docs/pink-1400X450_WL4mbsGxKB.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1653157257179");
+}
+
+h1 {
+  font-family: "Macondo", cursive;
+  text-align: left;
+  color: rgb(107, 107, 1);
+}

@@ -1,0 +1,143 @@
+.publicity {
+  display: grid;
+  grid-template-areas:
+    "logo"
+    "goal"
+    "description"
+    "contents";
+  grid-auto-flow: row;
+  grid-template-rows: auto;
+  background-color: #db4a92;
+}
+
+.project-goal {
+  grid-area: goal;
+  text-align: center;
+}
+
+.project-logo {
+  grid-area: logo;
+  margin: 0;
+}
+
+.projetct-description {
+  grid-area: description;
+  text-align: justify;
+  background-color: #cc6acc;
+}
+
+.module-lesson-container {
+  grid-area: contents;
+  display: grid;
+  grid-template-areas: "module lesson";
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
+}
+
+.module {
+  grid-area: module;
+  display: grid;
+  grid-template-areas:
+    "image1 title1"
+    "image1 text1";
+  grid-auto-flow: row;
+  grid-template-rows: auto;
+  align-items: center;
+  background-color: #ffb72b;
+}
+
+.image1 {
+  grid-area: image1;
+  width: 80%;
+}
+
+.title1 {
+  grid-area: title1;
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.text1 {
+  grid-area: text1;
+  margin: 2% 2%;
+  text-align: justify;
+  color: black;
+  font-size: 14px;
+}
+
+.lesson {
+  grid-area: lesson;
+  display: grid;
+  grid-template-areas:
+    "image2 title2"
+    "image2 text2";
+  grid-auto-flow: row;
+  grid-template-rows: auto;
+  align-items: center;
+  background-color: #92b4ec;
+}
+
+.image2 {
+  grid-area: image2;
+  width: 80%;
+}
+
+.title2 {
+  grid-area: title2;
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.text2 {
+  grid-area: text2;
+  margin: 2% 2%;
+  text-align: justify;
+  color: black;
+  font-size: 14px;
+}
+
+p {
+  margin: 2% 4%;
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+  font-size: 16px;
+}
+
+@media (min-width: 1024px) {
+  .publicity {
+    grid-template-areas:
+      "goal logo"
+      "description description"
+      "contents contents";
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  p,
+  ul,
+  .title1,
+  .title2,
+  .text1,
+  .text2 {
+    font-size: 20px;
+  }
+
+  .title1,
+  .title2,
+  .text1,
+  .text2 {
+    margin: 0;
+    text-align: left;
+  }
+
+  .image1,
+  .image2 {
+    width: 60%;
+  }
+}
