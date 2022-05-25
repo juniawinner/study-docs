@@ -1,37 +1,49 @@
 .publicity {
   display: grid;
-  grid-template-areas:
-    "logo"
-    "goal"
-    "description"
-    "contents";
-  grid-auto-flow: row;
-  grid-template-rows: auto;
-  background-color: #db4a92;
-}
-
-.project-goal {
-  grid-area: goal;
+  background-image: url("https://ik.imagekit.io/x4ikoq975/Study_Docs/publicity_wRBJVdLsv.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1653508618290");
+  padding: 15%;
+  margin-top: 2%;
   text-align: center;
 }
 
-.project-logo {
-  grid-area: logo;
-  margin: 0;
+.project-goal {
+  display: grid;
+  background-color: #9c6183;
+}
+
+ul {
+  list-style: none;
+  text-align: left;
 }
 
 .projetct-description {
-  grid-area: description;
+  display: grid;
+  background-color: #6294cc;
   text-align: justify;
-  background-color: #cc6acc;
+  margin-top: 2%;
+}
+
+.text1,
+li {
+  font-size: 18px;
+}
+
+.text2 {
+  font-size: 16px;
+  margin: 4% 6%;
+}
+
+.module-lesson {
+  display: grid;
+  margin-top: 2%;
 }
 
 .module-lesson-container {
-  grid-area: contents;
   display: grid;
   grid-template-areas: "module lesson";
   grid-auto-flow: column;
   grid-template-columns: 1fr 1fr;
+  gap: 1%;
 }
 
 .module {
@@ -40,27 +52,28 @@
   grid-template-areas:
     "image1 title1"
     "image1 text1";
-  grid-auto-flow: row;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   align-items: center;
   background-color: #ffb72b;
 }
 
-.image1 {
+.image-module {
   grid-area: image1;
   width: 80%;
 }
 
-.title1 {
+.title-module {
   grid-area: title1;
   margin: 0;
   text-align: center;
   font-size: 14px;
 }
 
-.text1 {
+.text-module {
   grid-area: text1;
-  margin: 2% 2%;
+  margin: 2%;
   text-align: justify;
   color: black;
   font-size: 14px;
@@ -72,72 +85,61 @@
   grid-template-areas:
     "image2 title2"
     "image2 text2";
-  grid-auto-flow: row;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   align-items: center;
-  background-color: #92b4ec;
+  background-color: #babd42;
 }
 
-.image2 {
+.image-lesson {
   grid-area: image2;
   width: 80%;
 }
 
-.title2 {
+.title-lesson {
   grid-area: title2;
   margin: 0;
   text-align: center;
   font-size: 14px;
 }
 
-.text2 {
+.text-lesson {
   grid-area: text2;
-  margin: 2% 2%;
+  margin: 2%;
   text-align: justify;
   color: black;
   font-size: 14px;
 }
 
-p {
-  margin: 2% 4%;
-  font-size: 16px;
-}
-
-ul {
-  list-style: none;
-  font-size: 16px;
-}
-
 @media (min-width: 1024px) {
-  .publicity {
-    grid-template-areas:
-      "goal logo"
-      "description description"
-      "contents contents";
-    grid-auto-flow: column;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+  .publicity,
+  .projetct-description,
+  .module-lesson {
+    margin-top: 1%;
   }
 
-  p,
-  ul,
-  .title1,
-  .title2,
   .text1,
-  .text2 {
+  li {
     font-size: 20px;
   }
 
-  .title1,
-  .title2,
-  .text1,
   .text2 {
-    margin: 0;
-    text-align: left;
+    font-size: 18px;
+    margin: 2% 3%;
   }
 
-  .image1,
-  .image2 {
-    width: 60%;
+  .title-module,
+  .text-module,
+  .title-lesson,
+  .text-lesson {
+    font-size: 18px;
+    text-align: left;
+    margin: 0;
+  }
+
+  .image-module,
+  .image-lesson {
+    width: 50%;
   }
 }

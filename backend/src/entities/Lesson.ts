@@ -17,8 +17,11 @@ export class Lesson {
   @Column()
   conceitual_map!: string;
 
-  @ObjectIdColumn()
-  contributor_id!: ObjectID;
+  @Column()
+  image!: string;
+
+  @Column()
+  contributor_nickname!: string;
 
   @CreateDateColumn()
   registration_date!: Date;

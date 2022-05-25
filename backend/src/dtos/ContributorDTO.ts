@@ -1,7 +1,7 @@
 import { ObjectID } from "typeorm";
 
 export interface ContributorDTO {
-  nickname: string;
-  id?: ObjectID;
-  email?: string;
+  Nickname: string;
+  id: ObjectID;
+  Email?: string;
 }

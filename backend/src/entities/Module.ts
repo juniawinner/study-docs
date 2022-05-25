@@ -10,6 +10,12 @@ export class Module {
   name!: string;
 
   @Column()
+  description!: string;
+
+  @Column()
+  image!: string;
+
+  @Column()
   total_lessons!: number;
 
   @Column((type) => Lesson)
