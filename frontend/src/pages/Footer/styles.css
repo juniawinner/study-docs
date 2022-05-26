@@ -1,0 +1,106 @@
+.project-author {
+  display: grid;
+  grid-template-areas:
+    "project"
+    "contact";
+  grid-auto-flow: row;
+  grid-template-rows: auto;
+  gap: 2%;
+  background-color: #9c6183;
+  border: none;
+  border-radius: 0 30px 0 30px;
+  text-align: center;
+  margin-top: 4%;
+  padding: 1%;
+  padding-bottom: 3%;
+}
+
+.project {
+  grid-area: project;
+  display: grid;
+  grid-template-areas:
+    "title"
+    "license"
+    "text";
+  grid-auto-flow: row;
+  grid-template-rows: auto;
+  margin-bottom: 2%;
+}
+
+.title {
+  grid-area: title;
+  font-size: 16px;
+}
+
+.license {
+  grid-area: license;
+  font-size: 16px;
+}
+
+.text {
+  grid-area: text;
+  font-size: 14px;
+}
+
+.contact {
+  grid-area: contact;
+  display: grid;
+  grid-template-areas: "contact-project contact-author";
+  grid-auto-flow: column;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  text-align: center;
+}
+
+.contact-project {
+  grid-area: contact-project;
+  font-size: 16px;
+}
+
+.contact-author {
+  grid-area: contact-author;
+  font-size: 16px;
+}
+
+.image {
+  width: 50px;
+}
+
+@media (min-width: 1024px) {
+  .project-author {
+    grid-template-areas: "project contact";
+    grid-auto-flow: column;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    gap: 2%;
+    padding-bottom: 0;
+  }
+
+  .project {
+    margin-bottom: 0;
+  }
+
+  .contact {
+    grid-template-areas:
+      "contact-project"
+      "contact-author";
+    align-items: center;
+  }
+
+  .title,
+  .license,
+  .contact-author,
+  .contact-project {
+    font-size: 18px;
+  }
+
+  .text {
+    font-size: 16px;
+    text-align: justify;
+    margin: 2% 0 3% 4%;
+  }
+
+  .image {
+    width: 64px;
+  }
+}

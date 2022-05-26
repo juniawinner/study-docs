@@ -1,9 +1,25 @@
-import Navigation from "./components/Navigation";
-import Publicity from "./components/Publicity";
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+import Homepage from "pages/Homepage";
+import Lesson from "pages/Lesson";
+import Footer from "pages/Footer";
 
 function App() {
   return (
-    <><Navigation /><Publicity /></>
+    <BrowserRouter>
+
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/modulos">
+          <Route path=":moduleId" element={<Lesson />} />
+        </Route>
+      </Routes>
+
+      <Footer />
+    </BrowserRouter>
   );
 }
 

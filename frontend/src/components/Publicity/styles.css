@@ -2,7 +2,7 @@
   display: grid;
   background-image: url("https://ik.imagekit.io/x4ikoq975/Study_Docs/publicity_wRBJVdLsv.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1653508618290");
   padding: 15%;
-  margin-top: 2%;
+  margin-top: 4%;
   text-align: center;
 }
 
@@ -20,7 +20,7 @@ ul {
   display: grid;
   background-color: #6294cc;
   text-align: justify;
-  margin-top: 2%;
+  margin-top: 4%;
 }
 
 .text1,
@@ -35,14 +35,14 @@ li {
 
 .module-lesson {
   display: grid;
-  margin-top: 2%;
+  margin-top: 4%;
 }
 
 .module-lesson-container {
   display: grid;
   grid-template-areas: "module lesson";
   grid-auto-flow: column;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1%;
 }
 
@@ -53,7 +53,7 @@ li {
     "image1 title1"
     "image1 text1";
   grid-auto-flow: column;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   align-items: center;
   background-color: #ffb72b;
@@ -86,7 +86,7 @@ li {
     "image2 title2"
     "image2 text2";
   grid-auto-flow: column;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   align-items: center;
   background-color: #babd42;
@@ -116,7 +116,7 @@ li {
   .publicity,
   .projetct-description,
   .module-lesson {
-    margin-top: 1%;
+    margin-top: 2%;
   }
 
   .text1,
