@@ -11,6 +11,6 @@ export class ContributorSignInController {
     const service = new ContributorSignInService();
     const result = await service.execute({ email, pass_word });
 
-    return res.status(200).json(result);
+    return res.json(result);
   };
 }
