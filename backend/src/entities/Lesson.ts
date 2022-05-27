@@ -21,15 +21,17 @@ export class Lesson {
   contributor_nickname: string;
 
   @CreateDateColumn()
-  registration_date!: Date;
+  registration_date: Date;
 
   constructor(
     name: string,
     conceitual_map: string,
-    contributor_nickname: string
+    contributor_nickname: string,
+    registration_date: Date
   ) {
     (this.name = name),
       (this.conceitual_map = conceitual_map),
-      (this.contributor_nickname = contributor_nickname);
+      (this.contributor_nickname = contributor_nickname),
+      (this.registration_date = registration_date);
   }
 }

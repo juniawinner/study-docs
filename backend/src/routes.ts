@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { ContributorSignInController } from "./controllers/ContributorSignInController";
 import { ContributorSignUpController } from "./controllers/ContributorSignUpController";
+import { CreateLessonController } from "./controllers/CreateLessonController";
 import { CreateModuleController } from "./controllers/CreateModuleController";
 import { ModuleController } from "./controllers/ModuleController";
 import { ModuleLessonController } from "./controllers/ModuleLessonController";
@@ -21,4 +22,4 @@ routes.post("/login/contribuidores", new ContributorSignInController().handle);
 //Rotas privadas
 routes.post("/dashboard/modules", new CreateModuleController().handle);
 
-routes.post("/dashboard/lessons");
+routes.post("/dashboard/lessons", new CreateLessonController().handle);

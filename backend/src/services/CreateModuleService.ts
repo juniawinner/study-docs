@@ -19,10 +19,14 @@ export class CreateModuleService {
     map,
     nickname,
   }: CreateModule) {
+    let registration_date = new Date();
+
     const module = new Module();
     module.name = name;
     module.description = description;
-    module.lessons = [new Lesson(name_lesson, map, nickname)];
+    module.lessons = [
+      new Lesson(name_lesson, map, nickname, registration_date),
+    ];
     module.total_lessons = module.lessons.length;
 
     const manager = new MongoEntityManager(AppDataSource);
