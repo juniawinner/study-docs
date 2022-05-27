@@ -12,14 +12,24 @@ export class Lesson {
   id!: ObjectID;
 
   @Column()
-  name!: string;
+  name: string;
 
   @Column()
-  conceitual_map!: string;
+  conceitual_map: string;
 
   @Column()
-  contributor_nickname!: string;
+  contributor_nickname: string;
 
   @CreateDateColumn()
   registration_date!: Date;
+
+  constructor(
+    name: string,
+    conceitual_map: string,
+    contributor_nickname: string
+  ) {
+    (this.name = name),
+      (this.conceitual_map = conceitual_map),
+      (this.contributor_nickname = contributor_nickname);
+  }
 }

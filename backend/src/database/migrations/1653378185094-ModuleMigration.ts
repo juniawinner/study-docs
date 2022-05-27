@@ -3,13 +3,6 @@ import { MongoQueryRunner } from "typeorm/driver/mongodb/MongoQueryRunner";
 
 export class ModuleMigration1653378185094 implements MigrationInterface {
   public async up(mongoQueryRunner: MongoQueryRunner): Promise<void> {
-    const createIndex = await mongoQueryRunner.createCollectionIndex(
-      "module",
-      { name: 1, "lessons.name": 1, "lessons.conceitual_map": 1 },
-      { unique: true }
-    );
-    console.log("Created indexes =>", createIndex);
-
     const insertResult = await mongoQueryRunner.insertMany("module", [
       {
         name: "TypeORM",
