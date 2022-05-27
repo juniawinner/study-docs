@@ -18,7 +18,6 @@ export class ModuleService {
     search.forEach(async (data) => {
       let dto: ModuleDTO = {
         id: data.id,
-        image: data.image,
         Modulo: data.name,
         description: data.description,
         Total: data.total_lessons,

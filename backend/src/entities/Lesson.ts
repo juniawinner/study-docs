@@ -18,9 +18,6 @@ export class Lesson {
   conceitual_map!: string;
 
   @Column()
-  image!: string;
-
-  @Column()
   contributor_nickname!: string;
 
   @CreateDateColumn()

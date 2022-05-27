@@ -13,9 +13,6 @@ export class Module {
   description!: string;
 
   @Column()
-  image!: string;
-
-  @Column()
   total_lessons!: number;
 
   @Column((type) => Lesson)

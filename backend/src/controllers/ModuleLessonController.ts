@@ -16,7 +16,6 @@ export class ModuleLessonController {
       })
       .forEach(async (lesson) => {
         let dto: ModuleDTO = {
-          image: lesson.image,
           Aula: lesson.name,
           Mapa: lesson.conceitual_map,
         };
