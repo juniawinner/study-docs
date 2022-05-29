@@ -73,7 +73,7 @@ export class ModuleMigration1653378185094 implements MigrationInterface {
           {
             name: "Relacionamento de dados",
             conceitual_map:
-              "https://embed.coggle.it/diagram/YozBdQ8o3JWkM_Yq/t/mongodb-relacionamento-de-dados/817bfa5c6c5d3b077146c7c3ace3c84405484e4b6b1d1da82f8e54a2463cd85f",
+              "https://www.canva.com/design/DAFCAgfyq-w/T6nrk7U_zJNL0tecId4s7g/edit?utm_content=DAFCAgfyq-w&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
             contributor_nickname: "juniawinner",
             registration_date: Date(),
           },
