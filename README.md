@@ -11,6 +11,7 @@
 
 1. [Sobre o projeto](#-sobre-o-projeto)
 1. [Desafios e Soluções](#-desafios-e-soluções)
+1. [Estruturação do Banco de Dados](#-estruturação-do-banco-de-dados)
 1. [Funcionalidades](#-funcionalidades)
 1. [Design Responsivo](#-design-responsivo)
 1. [Mapas Conceituais](#-mapas-conceituais)
@@ -55,6 +56,31 @@ No entanto, o projeto ainda não está finalizado, pois existem alguns desafios 
 - Criar o front-end do dashboard de Contribuidores(as), que é o espaço reservado para pessoas autorizadas ao exercício de criar, editar, excluir e listar os Mapas Conceituais.
 
 - Codificar os endpoints PUT e DELETE, para que o(a) contribuidor(a) manipule os Mapas Conceituais de que seja autor(a). No momento, apenas os endpoints GET e POST foram desenvolvidos, para listar e criar novos Módulos e Aulas.
+
+# 🎲 Estruturação do Banco de Dados
+
+Neste projeto, utilizamos o MongoDB, um dos banco de dados NoSQL mais famosos entre os desenvolvedores, devido a ampla funcionalidade e desempenho.
+
+A ferramenta MongoDB Compass foi utilizada para desenvolvimento do projeto (MongoDB 5.0.6 Community). A URI padrão de conexão com o banco de dados é a seguinte: mongodb://localhost:27017
+
+Além disso, utilizamos o TypeORM para auxiliar o processo de armazenamento de dados, sendo que essa ferramenta é instalada automaticamente durante os comandos de clonagem e de instalação dos arquivos do projeto.
+
+Para execução do Banco de Dados, isto é, a inserção de informações no MongoDB, segue-se os comandos:
+
+COMANDO                                          |                      TAREFA                    
+-------------------------------------------------|----------------------------------------------------
+npm run typeorm migration:run -- -d src/database |Comando para executar Migrations, que irá inserir os dados no MongoDB.
+npm run typeorm migration:show -- -d src/database|Comando para mostrar se todas as migrações foram executadas, ou se existem Migrations pendentes.
+
+Salienta-se que os dados já estão prontos para inserção no MongoDB Compass, e encontram-se nos seguintes arquivos do caminho de pastas: backend > src > database
+
+ARQUIVO                              |                     DESCRIÇÃO                   
+-------------------------------------|----------------------------------------------------
+index.ts                             |Configurações do banco de dados: tipo, host, porta, nome do database, entidades e migrations.
+1653378185094-ModuleMigration.ts     |Dados sobre os Módulos e as Aulas referentes ao projeto.
+1653397423039-ContributorMigration.ts|Dados dos Colaboradores cadastrados no projeto.
+
+No final do README, descrevemos os comandos para clonar o projeto do GitHub e instalar as dependências.
 
 # 🛠️ Funcionalidades
 
